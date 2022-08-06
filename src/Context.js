@@ -8,10 +8,22 @@ import React,{useState,useContext,
 const AppContext = React.createContext()
 
 
-const Context = () => {
+const AppProvider = ({ children }) => {
+  const [cart, setCart] = useState(cartItems)
+
   return (
-    <div>Context</div>
+    <AppContext.Provider
+      value={{
+        cart,
+      }}
+    >
+      {children}
+    </AppContext.Provider>
   )
 }
+// make sure use
+export const useGlobalContext = () => {
+  return useContext(AppContext)
+}
 
-export default Context
+export { AppContext, AppProvider }
