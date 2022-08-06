@@ -26,7 +26,8 @@ const clearCart =() => {
   return (
     <AppContext.Provider
       value={{
-        ...state
+        ...state,
+        clearCart
       }}
     >
       {children}
