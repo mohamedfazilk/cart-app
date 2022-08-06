@@ -10,7 +10,7 @@ const AppContext = React.createContext()
 
 
 const AppProvider = ({ children }) => {
-  const [cart, setCart] = useReducer()
+  const [state,dispatch] = useReducer();
 
   return (
     <AppContext.Provider
