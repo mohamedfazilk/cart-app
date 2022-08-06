@@ -1,9 +1,7 @@
 import React from 'react'
 
-const reducer = () => {
-  return (
-    <div>reducer</div>
-  )
+const reducer = (state,action) => {
+  return state
 }
 
-export default reducer
+export default reducer    
