@@ -1,9 +1,24 @@
+import { useGlobalContext } from './Context'
 
+// components
+import Navbar from './Navbar'
+import CartContainer from './CartContainer'
+// items
 
 function App() {
+  // if (loading) {
+  //   return (
+  //     <div className='loading'>
+  //       <h1>Loading...</h1>
+  //     </div>
+  //   )
+  // }
   return (
-    <h1>yhhh</h1>
-  );
+    <main>
+      <Navbar />
+      <CartContainer />
+    </main>
+  )
 }
 
-export default App;
+export default App
