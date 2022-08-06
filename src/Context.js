@@ -6,7 +6,14 @@ import React,{useState,useContext,
  
  
  const url = 'https://course-api.com/react-useReducer-cart-project'
-const AppContext = React.createContext()
+const AppContext = React.createContext();
+
+const initialState = {
+  loading:false,
+  cart   : Cartitems,
+  total : 0,
+  amount :0,
+}
 
 
 const AppProvider = ({ children }) => {
