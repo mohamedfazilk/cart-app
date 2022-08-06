@@ -1,7 +1,8 @@
 import React,{useState,useContext,
     useReducer,useEffect} from 'react';
 
- import Cartitem from './data';
+ import Cartitems from './data';
+ import reducer from './reducer';
  
  
  const url = 'https://course-api.com/react-useReducer-cart-project'
@@ -9,7 +10,7 @@ const AppContext = React.createContext()
 
 
 const AppProvider = ({ children }) => {
-  const [cart, setCart] = useState(Cartitem)
+  const [cart, setCart] = useState(Cartitems)
 
   return (
     <AppContext.Provider
