@@ -19,6 +19,14 @@ const initialState = {
 const AppProvider = ({ children }) => {
   const [state,dispatch] = useReducer(reducer,initialState);
 
+const fetchData = async() =>{
+  dispatch({type:'LOADING'})
+  const response = await fetch(url);
+  const cartitem = await response.json();
+  dispatch({type:'DISLAY_ITEMS', payload:cart})
+
+}
+
 const clearCart =() => {
   dispatch({ type:'CLEAR_CART' })
 }  
