@@ -35,6 +35,8 @@ const reducer = (state,action) => {
   const{total,amount} = state.cart.reduce((cartTotals,cartItem)=>{
     const {price, amount} = cartItem
     cartTotals.amount += amount;
+   const itemTotal = price * amount;
+    
     return cartTotals
   },{
     total:0,
