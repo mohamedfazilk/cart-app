@@ -27,6 +27,10 @@ const fetchData = async() =>{
 
 }
 
+useEffect(()=>{
+  fetchData();
+},[])
+
 const clearCart =() => {
   dispatch({ type:'CLEAR_CART' })
 }  
